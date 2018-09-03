@@ -27,6 +27,14 @@ public:
     return str;
 
   }
+  static bool directoryExists(std::string path)
+  {
+	boost::filesystem::path dir(path);
+
+	return boost::filesystem::exists(dir);
+    
+
+  }
 
   static bool createDirectory(std::string path)
   {
